@@ -1,0 +1,43 @@
+module.exports = {
+  mode: "jit",
+  content: [
+    "./src/**/**/*.{js,ts,jsx,tsx,html,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,html,mdx}",
+  ],
+  darkMode: "class",
+  theme: {
+    screens: { md: { max: "1050px" }, sm: { max: "550px" } },
+    extend: {
+      colors: {
+        orange_A100: "#f7cf7c",
+        gray_600: "#756c6c",
+        gray_105: "#f4f4f4",
+        gray_601: "#9e616a",
+        gray_301: "#e6e6e6",
+        gray_400: "#cacaca",
+        gray_500: "#a6a6a6",
+        gray_302: "#e4e4e4",
+        gray_401: "#aeaeae",
+        red_300: "#e68969",
+        gray_200: "#f3f1f0",
+        red_400_26: "#eb4b4d26",
+        gray_300: "#e4e0de",
+        gray_100: "#f2f2f2",
+        bluegray_900: "#2f2e41",
+        bluegray_801: "#2b5559",
+        bluegray_800: "#3f3d56",
+        black_900: "#000000",
+        bluegray_800_26: "#2b555926",
+        white_A700: "#ffffff",
+        bluegray_901: "#2f2f2f",
+      },
+      fontFamily: {
+        helveticaneue: "Helvetica Neue",
+        helvetica: "Helvetica",
+        montserrat: "Montserrat",
+      },
+      boxShadow: { bs: "0px 4px  4px 0px #e4e4e4" },
+    },
+  },
+  plugins: [require("@tailwindcss/forms")],
+};
