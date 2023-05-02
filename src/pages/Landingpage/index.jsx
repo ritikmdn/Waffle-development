@@ -13,7 +13,7 @@ const LandingpagePage = () => {
       <div className="bg-gray_300 flex flex-col font-helveticaneue items-center justify-end mx-auto pt-[0px] w-full">
         <div className="flex flex-col justify-start w-full">
           <LandingPageNavbar
-            className="bg-gray_200 flex flex-row items-center justify-end mx-auto p-[9px] md:px-5 rounded-[10px] w-[39%] md:w-full"
+            // className="bg-gray_200 flex flex-row items-center justify-end mx-auto p-[9px] md:px-5 rounded-[10px] w-[39%] md:w-full"
             waffle="Waffle."
             product="Product"
             readnews="Read News"
