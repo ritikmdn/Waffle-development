@@ -9,7 +9,7 @@ const NewsfeedPage = () => {
       <div className="bg-white_A700 flex flex-col font-helveticaneue items-center justify-start mx-auto w-full">
         <div className="bg-gray_300 flex flex-col items-center justify-start p-[42px] md:px-10 sm:px-5 w-full">
           <LandingPageNavbar
-            className="bg-gray_200 flex flex-row items-center justify-end mx-auto p-[9px] md:px-5 rounded-[10px] w-[39%] md:w-full"
+            className="flex flex-row items-center justify-end mx-auto p-[9px] md:px-5 rounded-[10px] w-[39%] md:w-full"
             waffle="Waffle."
             product="Product"
             readnews="Read News"
