@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Home from "pages/Home";
+import Admin from "pages/Admin";
 import NotFound from "pages/NotFound";
 const Newsfeed = React.lazy(() => import("pages/Newsfeed"));
 const Waitlist = React.lazy(() => import("pages/Waitlist"));
@@ -15,6 +15,7 @@ const ProjectRoutes = () => {
           <Route path="/" element={<Landingpage />} />
           <Route path="/waitlist" element={<Waitlist />} />
           <Route path="/newsfeed" element={<Newsfeed />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </Router>
     </React.Suspense>
