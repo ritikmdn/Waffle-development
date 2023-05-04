@@ -9,7 +9,7 @@ const WaitlistPage = () => {
       <div className="bg-gray_300 flex flex-col font-helveticaneue items-start justify-start mx-auto p-[42px] md:px-10 sm:px-5 w-full">
         <div className="flex flex-col md:gap-10 gap-[145px] justify-start mb-[210px] md:ml-[0] ml-[58px] w-[86%] md:w-full">
           <LandingPageNavbar
-            className="bg-gray_200 flex flex-row items-center justify-end mx-auto p-[9px] md:px-5 rounded-[10px] w-[39%] md:w-full"
+            // className="bg-gray_200 flex flex-row items-center justify-end mx-auto p-[9px] md:px-5 rounded-[10px] w-[39%] md:w-full"
             waffle="Waffle."
             product="Product"
             readnews="Read News"
