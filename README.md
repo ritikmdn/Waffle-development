@@ -47,6 +47,18 @@ This file contains various environment variables that you can configure.
  │   ├── hooks -------------- Helpful Hooks
  │   ├── index.jsx
  │   ├── pages -------------- All route pages
+ │   │   ├── Admin
+ │   │      ├── index.jsx
+ │   │      └── admin.css --- Associated CSS file
+ │   │   ├── Landingpage
+ │   │      ├── index.jsx
+ │   │      └── Landingpage.css --- Associated CSS file
+ │   │   ├── Newsfeed
+ │   │      ├── index.jsx
+ │   │      └── Newsfeed.css --- Associated CSS file
+ │   │   ├── Waitlist
+ │   │      ├── index.jsx
+ │   │      └── Waitlist.css --- Associated CSS file  
  │   ├── Routes.jsx ---------- Routing
  │   ├── styles
  │   │   ├── index.css ------ Other Global Styles

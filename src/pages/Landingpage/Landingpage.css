@@ -1,4 +1,4 @@
-.page-container {
+.landingpage-container {
   background-color: rgba(228, 224, 222, 1);
   display: flex;
   flex-direction: column;
@@ -373,4 +373,3 @@
     width: auto;
   }
 }
-

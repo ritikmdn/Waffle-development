@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Admin from "pages/Admin";
 import NotFound from "pages/NotFound";
+import ScrollToHash from "./components/ScrollToHash"; // <-- Import ScrollToHash
 const Newsfeed = React.lazy(() => import("pages/Newsfeed"));
 const Waitlist = React.lazy(() => import("pages/Waitlist"));
 const Landingpage = React.lazy(() => import("pages/Landingpage"));
@@ -9,6 +10,7 @@ const ProjectRoutes = () => {
   return (
     <React.Suspense fallback={<>Loading...</>}>
       <Router>
+        <ScrollToHash /> {/* <-- Add ScrollToHash component */}
         <Routes>
           {/* <Route path="/" element={<Home />} /> */}
           <Route path="*" element={<NotFound />} />

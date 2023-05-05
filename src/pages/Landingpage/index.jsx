@@ -1,19 +1,21 @@
-import React from "react";
+import React, {useRef} from "react";
+import "./Landingpage.css"
 
 import LandingPageNavbar from "components/LandingPageNavbar";
 import { Text, Img, Button, Line } from "components";
 import { useNavigate } from "react-router-dom";
-
-import "./Landingpage.css"
+// import React, {useRef } from 'react';
 
 const LandingpagePage = () => {
 
   const navigate = useNavigate();
+  const bottomRef = useRef(null);
 
   return (
     <>
-      <div className="page-container"> 
+      <div className="landingpage-container"> 
         <LandingPageNavbar
+          bottomRef = {bottomRef}
           waffle="Waffle."
           product="Product"
           readnews="Read News"
@@ -42,12 +44,8 @@ const LandingpagePage = () => {
             alt="illustrationlan"
           />
         </div>
-        {/* <div className="flex flex-col items-center justify-start mt-[200px] w-full"> */}
-        <div className="page-bottom-section">
-          {/* <div className="bg-white_A700 flex flex-col md:gap-10 gap-[111px] items-center justify-start p-[42px] ml-auto mr-auto px-[200px] md:px-10 sm:px-5 w-full"> */}
+        <div className="page-bottom-section" ref={bottomRef} id="product">
           <div className="page-bottom-top">
-            {/* <div className="flex flex-col items-center justify-start max-w-[1252px] mb-[109px] mx-auto w-full"> */}
-              {/* <div className="flex flex-col items-center justify-start w-full"> */}
               <div className="overview-title">
                 <Text
                   className="text-black_900 text-center w-auto mt-[80px]"

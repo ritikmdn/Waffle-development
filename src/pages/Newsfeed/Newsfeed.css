@@ -1,360 +1,360 @@
-.page-container {
-    background-color: rgba(228, 224, 222, 1);
-    display: flex;
-    flex-direction: column;
-    font-family: Helvetica Neue;
-    align-items: center;
-    justify-content: flex-end;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 0px;
-    width: 100%;
-  }
+.newsfeed-page-container {
+  background-color: rgba(228, 224, 222, 1);
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica Neue;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0px;
+  width: 100%;
+}
 
 /* Footer styles */
 
 .list {
-    display: flex;
-    flex-direction: column;
-    gap: 10vmin;
-    align-items: center;
-    max-width: 90%;
-    margin-top: 100px;
-    margin-bottom: 10vmin;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 5px; /* applies only on medium-sized screens and above */
-    padding-right: 5px; /* applies only on medium-sized screens and above */
-    width: 100%;
-  }
-  
-  /* Media query for medium-sized screens and above */
-  @media screen and (min-width: 768px) {
-    .list {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-  
-  .news-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 5vmin;
-    padding-top: 2vmin;
-    background-color: #F5F3EF; /* assuming 'gray_105' is a shade of gray */
-    border-radius: 0.5rem;
-    gap: auto;
-    width: 100%;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 10vmin;
+  align-items: center;
+  max-width: 90%;
+  margin-top: 100px;
+  margin-bottom: 10vmin;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5px; /* applies only on medium-sized screens and above */
+  padding-right: 5px; /* applies only on medium-sized screens and above */
+  width: 100%;
+}
 
-  .article-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+/* Media query for medium-sized screens and above */
+@media screen and (min-width: 768px) {
+  .list {
+    padding-left: 0;
+    padding-right: 0;
   }
+}
 
+.news-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5vmin;
+  padding-top: 2vmin;
+  background-color: #F5F3EF; /* assuming 'gray_105' is a shade of gray */
+  border-radius: 0.5rem;
+  gap: auto;
+  width: 100%;
+}
+
+.article-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.category-text {
+  color: #212529; /* assuming 'black_900' is a shade of black */
+  text-align: left;
+  font-size: 24px;
+  font-weight: 700;
+  width: auto;
+}
+
+@media screen and (max-width: 768px) {
   .category-text {
-    color: #212529; /* assuming 'black_900' is a shade of black */
-    text-align: left;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
-    width: auto;
   }
+}
 
-  @media screen and (max-width: 768px) {
-    .category-text {
-      font-size: 18px;
-      font-weight: 700;
-    }
-  }
+.share-icon {
+  cursor: pointer;
+  zoom: 125%;
+  border-radius: 100%;
+  background-color: white;
+  padding: 1vmin;
+}
 
-  .share-icon {
-    cursor: pointer;
-    zoom: 125%;
-    border-radius: 100%;
-    background-color: white;
-    padding: 1vmin;
-  }
+.content-box {
+  display: flex;
+  flex-direction: row;
+  gap: 5vmin;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%; /* assuming you want the width to be 96% of the parent element */
+  margin: 2vmin;
+}
 
+@media screen and (max-width: 768px) {
   .content-box {
-    display: flex;
-    flex-direction: row;
-    gap: 5vmin;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%; /* assuming you want the width to be 96% of the parent element */
-    margin: 2vmin;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .content-box {
-      flex-direction: column;
-      gap: 5vmin;
-      width: 100%;
-    }
-  }
-
-  .article-image {
-    height: 30vmin; /* assuming you want the height to be fixed at 243px on small screens and above */
-    object-fit: cover;
-    border-radius: 0.5rem;
-    width: auto;
-    max-width: 40vmin;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .article-image {
-      flex: 1;
-      height: auto;
-      max-width: 75vmin;
-    }
-  }  
-
-  .article-text {
-    display: flex;
     flex-direction: column;
-    gap: 3vmin;
-    align-items: center;
-    justify-content: flex-start;
-    width: auto;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .article-text {
-      flex: 1;
-      width: 100%;
-    }
-  }  
-
-  .article-text-headline {
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 115%; /* assuming you want the line height to be 111.84% of the font size */
-    color: #212529; /* assuming 'black_900' is a shade of black */
-    text-align: left;
+    gap: 5vmin;
     width: 100%;
+  }
+}
+
+.article-image {
+  height: 30vmin; /* assuming you want the height to be fixed at 243px on small screens and above */
+  object-fit: cover;
+  border-radius: 0.5rem;
+  width: auto;
+  max-width: 40vmin;
+}
+
+@media screen and (max-width: 768px) {
+  .article-image {
+    flex: 1;
+    height: auto;
+    max-width: 75vmin;
+  }
+}  
+
+.article-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3vmin;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .article-text {
+    flex: 1;
+    width: 100%;
+  }
+}  
+
+.article-text-headline {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 115%; /* assuming you want the line height to be 111.84% of the font size */
+  color: #212529; /* assuming 'black_900' is a shade of black */
+  text-align: left;
+  width: 100%;
+}
+
+.article-text-content {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 115%; /* assuming you want the line height to be 111.84% of the font size */
+  color: #212529; /* assuming 'black_900' is a shade of black */
+  text-align: left;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .article-text-headline {
+    font-size: 18px;
   }
 
   .article-text-content {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 115%; /* assuming you want the line height to be 111.84% of the font size */
-    color: #212529; /* assuming 'black_900' is a shade of black */
-    text-align: left;
-    width: 100%;
-  }
-
-  @media screen and (max-width: 768px) {
-    .article-text-headline {
-      font-size: 18px;
-    }
-
-    .article-text-content {
-        font-size: 15px;
-      }
-  } 
-  
-  .opinion-poll-box {
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    font-family: "Montserrat", sans-serif;
-    align-items: left;
-    justify-content: flex-start;
-    margin-top: 5vmin ;
-    padding: 1.5vmin;
-    padding-left: 2vmin;
-    padding-right: 2vmin;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    gap: 0.5vmin;
-    width: 100%;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .opinion-poll-box {
-      width: 100%;
-      padding-top: 5vmin;
-      padding-bottom: 5vmin;
-      align-items: center;
-      gap: 2vmin;
-    }
-  }  
-
-  .opinion-poll-question {
-    display: flex;
-    flex-direction: row;
-    font-family: "Helvetica Neue", sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    gap: 5vmin;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-    text-align: left;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .opinion-poll-question {
-      flex-direction: column;
-      gap: 10vmin;
       font-size: 15px;
-      padding: 2vmin;
     }
-  }
+} 
 
-  .poll-options-box {
-    display: flex;
-    flex-direction: row;
-    font-family: "Helvetica Neue", sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    gap: 2.5vmin;
-    align-items: flex-start;
-    justify-content: flex-end;
-    width: auto;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .poll-options-box {
-      flex-direction: column;
-      gap: 5px;
-      align-content: center !important;
-      justify-content: center !important;
-    }
-  }
+.opinion-poll-box {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  align-items: left;
+  justify-content: flex-start;
+  margin-top: 5vmin ;
+  padding: 1.5vmin;
+  padding-left: 2vmin;
+  padding-right: 2vmin;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  gap: 0.5vmin;
+  width: 100%;
+}
 
-  .options {
-    cursor: pointer;
-    font-weight: bold;
-    line-height: normal;
-    color: #000000; /* assuming 'bluegray_801' is a shade of blue-gray */
-    text-align: center;
-    font-size: 15px;
-    width: auto;
-    min-width: 10vmax;
-    border-radius: 10px;
-    padding: 2vmin;
-    padding-left: 5vmin;
-    padding-right: 5vmin;
-    background-color: #F4F4F4; /* assuming 'FillBluegray80026' is a variant that sets the background color to #263238 */
-  }
-  
-  .options:hover {
-    background-color: #455a64; /* assuming the hover color is a darker shade of blue-gray */
-    color: #ffffff; /* assuming the hover color for text is white */
-  }
-
-  @media screen and (max-width: 768px) {
-    .options {
-        min-width: 30vmax;
-        font-size: 12px;
-    }
-  }
-  
-  
-  .page-bottom-down {
-    background-color: #1B262C;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    /* max-width: 1240px; */
-    margin: 0 auto;
-    padding-left: 8vh;
-    padding-right: 8vh;
-    padding-bottom: 8vh;
+@media screen and (max-width: 768px) {
+  .opinion-poll-box {
     width: 100%;
+    padding-top: 5vmin;
+    padding-bottom: 5vmin;
+    align-items: center;
+    gap: 2vmin;
+  }
+}  
+
+.opinion-poll-question {
+  display: flex;
+  flex-direction: row;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  gap: 5vmin;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .opinion-poll-question {
+    flex-direction: column;
+    gap: 10vmin;
+    font-size: 15px;
+    padding: 2vmin;
+  }
+}
+
+.poll-options-box {
+  display: flex;
+  flex-direction: row;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  gap: 2.5vmin;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .poll-options-box {
+    flex-direction: column;
+    gap: 5px;
+    align-content: center !important;
+    justify-content: center !important;
+  }
+}
+
+.options {
+  cursor: pointer;
+  font-weight: bold;
+  line-height: normal;
+  color: #000000; /* assuming 'bluegray_801' is a shade of blue-gray */
+  text-align: center;
+  font-size: 15px;
+  width: auto;
+  min-width: 10vmax;
+  border-radius: 10px;
+  padding: 2vmin;
+  padding-left: 5vmin;
+  padding-right: 5vmin;
+  background-color: #F4F4F4; /* assuming 'FillBluegray80026' is a variant that sets the background color to #263238 */
+}
+
+.options:hover {
+  background-color: #455a64; /* assuming the hover color is a darker shade of blue-gray */
+  color: #ffffff; /* assuming the hover color for text is white */
+}
+
+@media screen and (max-width: 768px) {
+  .options {
+      min-width: 30vmax;
+      font-size: 12px;
+  }
+}
+
+
+.page-bottom-down {
+  background-color: #1B262C;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* max-width: 1240px; */
+  margin: 0 auto;
+  padding-left: 8vh;
+  padding-right: 8vh;
+  padding-bottom: 8vh;
+  width: 100%;
+}
+
+.footer-title-text {
+  text-align: left;
+  color: #FFFFFF;
+  width: 100%;
+  font-size: 90px; /* Assuming this is the default font size for body5 */
+  font-weight: 400;
+  line-height: 120%; /* Assuming this is the default line-height for body5 */
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.footer-button {
+  width: 30vmin;
+  margin-left: 0px;
+  margin-right: auto;
+  padding: 2.5vh;
+  font-size: 20px;
+}
+
+
+@media (max-width: 768px) { 
+
+  .page-bottom-down {
+    padding-left: 4vh;
+    padding-bottom: 2vh;
   }
   
   .footer-title-text {
-    text-align: left;
-    color: #FFFFFF;
-    width: 100%;
-    font-size: 90px; /* Assuming this is the default font size for body5 */
-    font-weight: 400;
-    line-height: 120%; /* Assuming this is the default line-height for body5 */
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    font-size: 45px;
+    width: 90%;
   }
-  
-  .footer-button {
-    width: 30vmin;
-    margin-left: 0px;
-    margin-right: auto;
-    padding: 2.5vh;
-    font-size: 20px;
+  .footer-button{
+    font-size: 16px;
+    width: 40vmin;
   }
-  
-  
-  @media (max-width: 768px) { 
-  
-    .page-bottom-down {
-      padding-left: 4vh;
-      padding-bottom: 2vh;
-    }
-    
-    .footer-title-text {
-      font-size: 45px;
-      width: 90%;
-    }
-    .footer-button{
-      font-size: 16px;
-      width: 40vmin;
-    }
-  }
-  
-  .footer-bottom {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 5vh;
-    width: 100%;
-  }
-  
-  .footer-socials {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 2vmin;
-    justify-content: space-between;
-    width: auto;
-  }
-  
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5vh;
+  width: 100%;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 2vmin;
+  justify-content: space-between;
+  width: auto;
+}
+
+.footer-socials-text {
+  margin-top: 2vmin;
+  text-align: left;
+  color: #FFFFFF;
+  width: auto;
+  font-size: 20px; /* Assuming this is the font size for body2 in the project */
+  line-height: 115%; /* Assuming this is the line height for body2 in the project */
+}
+
+@media (max-width: 768px) { 
+
   .footer-socials-text {
-    margin-top: 2vmin;
-    text-align: left;
-    color: #FFFFFF;
-    width: auto;
-    font-size: 20px; /* Assuming this is the font size for body2 in the project */
-    line-height: 115%; /* Assuming this is the line height for body2 in the project */
+    font-size: 14px;
+    /* width: 100%; */
   }
-  
-  @media (max-width: 768px) { 
-  
-    .footer-socials-text {
-      font-size: 14px;
-      /* width: 100%; */
-    }
-  }
-  
+}
+
+.googleplay {
+  height: 8vmin;
+  min-height: 0; /* This prevents the image from being distorted when height is less than the intrinsic height */
+  object-fit: cover;
+  margin-top: 2vmin;
+  width: auto;
+}
+
+@media (max-width: 768px) {
   .googleplay {
-    height: 8vmin;
-    min-height: 0; /* This prevents the image from being distorted when height is less than the intrinsic height */
-    object-fit: cover;
-    margin-top: 2vmin;
+    height: 10vmin;
     width: auto;
   }
-  
-  @media (max-width: 768px) {
-    .googleplay {
-      height: 10vmin;
-      width: auto;
-    }
-  }
+}

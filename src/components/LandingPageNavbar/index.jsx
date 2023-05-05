@@ -4,13 +4,21 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import "./LandingPageNavbar.css"
+import { Link } from "react-router-dom";
+import ScrollToHash from 'components/ScrollToHash';
 
 const LandingPageNavbar = (props) => {
   const navigate = useNavigate();
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const generateKey = () => Math.random().toString(36).substr(2, 9);
 
   const toggleNavbar = () => {
     setNavbarOpen(!navbarOpen);
+  };
+
+  const handleProductClick = () => {
+    navigate("/");
+    props.bottomRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const navbarClass = navbarOpen ? "navbar navbar-vertical" : "navbar";
@@ -35,12 +43,15 @@ const LandingPageNavbar = (props) => {
             </Text>
           </div>
           <div className={productClass}>
-            <Text variant="body3" onClick={() => navigate("/#product")}>
+            <Link 
+              to={{pathname: "/", hash: "#product"}}
+              onClick={() => <ScrollToHash key={generateKey()}/>}
+            >
               {props?.product}
-            </Text>
+            </Link>
           </div>
           <div className={newsClass}>
-            <Text variant="body3" onClick={() => navigate("/newsfeed")}>
+            <Text variant="body3" onClick={() => navigate("/Newsfeed")}>
               {props?.readnews}
             </Text>
           </div>

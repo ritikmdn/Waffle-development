@@ -1,16 +1,14 @@
 import React from "react";
-
+import "./Newsfeed.css"
 import LandingPageNavbar from "components/LandingPageNavbar";
 import { List, Text, Img, Button, Line } from "components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
 
-import "./Newsfeed.css"
-
 const NewsfeedPage = () => {
   return (
     <>
-      <div className="page-container">
+      <div className="newsfeed-page-container">
           <LandingPageNavbar
             waffle="Waffle."
             product="Product"

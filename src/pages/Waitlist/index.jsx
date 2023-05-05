@@ -1,14 +1,13 @@
 import React from "react";
 
+import "./Waitlist.css"
 import LandingPageNavbar from "components/LandingPageNavbar";
 import { Text, Line, Button } from "components";
-
-import "./Waitlist.css"
 
 const WaitlistPage = () => {
   return (
     <>
-      <div className="page-container">
+      <div className="waitlist-page-container">
           <LandingPageNavbar
             waffle="Waffle."
             product="Product"
