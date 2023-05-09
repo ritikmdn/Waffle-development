@@ -24,46 +24,50 @@ This file contains various environment variables that you can configure.
 
 ## Folder Structure
 
+
 ```
- .
- ├── package.json
- ├── postcss.config.js
- ├── public
- │   ├── assets
- │   │   └── images --------- All Project Images
- │   ├── favicon.ico
- │   ├── index.html
- │   ├── manifest.json
- │   └── robots.txt
- ├── README.md
- ├── src
- │   ├── App.jsx
- │   ├── assets
- │   │   └── fonts ---------- Project fonts
- │   ├── components --------- UI and Detected Common Components
- │   ├── constants ---------- Project constants, eg: string consts
- │   ├── hooks -------------- Helpful Hooks
- │   ├── index.jsx
- │   ├── pages -------------- All route pages
- │   │   ├── Admin
- │   │      ├── index.jsx
- │   │      └── admin.css --- Associated CSS file
- │   │   ├── Landingpage
- │   │      ├── index.jsx
- │   │      └── Landingpage.css --- Associated CSS file
- │   │   ├── Newsfeed
- │   │      ├── index.jsx
- │   │      └── Newsfeed.css --- Associated CSS file
- │   │   ├── Waitlist
- │   │      ├── index.jsx
- │   │      └── Waitlist.css --- Associated CSS file  
- │   ├── Routes.jsx ---------- Routing
- │   ├── styles
- │   │   ├── index.css ------ Other Global Styles
- │   │   └── tailwind.css --- Default Tailwind modules
- │   └── util
- │       └── index.jsx ------- Helpful utils
- └── tailwind.config.js ----- Entire theme config, colors, fonts etc.
+.
+├── Backend-Django
+├── README.md
+├── Frontend-React
+    .
+    ├── package.json
+    ├── postcss.config.js
+    ├── public
+    │   ├── assets
+    │   │   └── images --------- All Project Images
+    │   ├── favicon.ico
+    │   ├── index.html
+    │   ├── manifest.json
+    │   └── robots.txt
+    ├── src
+    │   ├── App.jsx
+    │   ├── assets
+    │   │   └── fonts ---------- Project fonts
+    │   ├── components --------- UI and Detected Common Components
+    │   ├── constants ---------- Project constants, eg: string consts
+    │   ├── hooks -------------- Helpful Hooks
+    │   ├── index.jsx
+    │   ├── pages -------------- All route pages
+    │   │   ├── Admin
+    │   │      ├── index.jsx
+    │   │      └── admin.css --- Associated CSS file
+    │   │   ├── Landingpage
+    │   │      ├── index.jsx
+    │   │      └── Landingpage.css --- Associated CSS file
+    │   │   ├── Newsfeed
+    │   │      ├── index.jsx
+    │   │      └── Newsfeed.css --- Associated CSS file
+    │   │   ├── Waitlist
+    │   │      ├── index.jsx
+    │   │      └── Waitlist.css --- Associated CSS file  
+    │   ├── Routes.jsx ---------- Routing
+    │   ├── styles
+    │   │   ├── index.css ------ Other Global Styles
+    │   │   └── tailwind.css --- Default Tailwind modules
+    │   └── util
+    │       └── index.jsx ------- Helpful utils
+    └── tailwind.config.js ----- Entire theme config, colors, fonts etc.
 ```
 
 For the project to build, **these files must exist with exact filenames**:
