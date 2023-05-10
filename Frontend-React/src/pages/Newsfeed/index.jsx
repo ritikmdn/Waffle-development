@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import React, { useState, useEffect } from 'react';
 import "./Newsfeed.css"
 import LandingPageNavbar from "components/LandingPageNavbar";
 import { List, Text, Img, Button, Line } from "components";
@@ -6,6 +7,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
 
 const NewsfeedPage = () => {
+
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:8000/api/articles/')
+      .then(response => response.json())
+      .then(data => setArticles(data));
+  }, []);
+
   return (
     <>
       <div className="newsfeed-page-container">
@@ -19,7 +29,8 @@ const NewsfeedPage = () => {
           className="list"
           orientation="vertical"
         >
-          <div className="news-box">
+          {articles.map(article => (
+          <div className="news-box" key={article.id}>
               <div className="flex flex-row md:gap-10 items-center justify-between w-full">
                   <Text className="category-text">
                     #Finance
@@ -38,21 +49,13 @@ const NewsfeedPage = () => {
                   <Text
                     className="article-text-headline"
                   >
-                    Graduates from ‘fancy colleges in US’ moving back to
-                    India: Nikhil Kamath
+                    {article.title}
                   </Text>
                   <Text
                     className="article-text-content"
                   >
                     <>
-                      Wemet minim mollit non deserunt ullamco est sit aliqua
-                      dolor do amet sint. Velit officia consequat duis enim
-                      velit mollit. Exercitation veniam consequat sunt nostrud
-                      amet. Wemet minim mollit non deserunt ullamco est sit
-                      aliqua dolor do amet sint. Velit officia consequat duis
-                      enim velit mollit. <br />
-                      Wemet minim mollit non deserunt ullamco est sit aliqua
-                      dolor do amet.
+                    {article.content}
                     </>
                   </Text>
                 </div>
@@ -76,6 +79,7 @@ const NewsfeedPage = () => {
                 </div>
               </div>
           </div>
+          ))}
         </List>
         <div className="page-bottom-down">
           <Line className="bg-gray_105 h-0.5 mt-[10vmin] w-full" />
