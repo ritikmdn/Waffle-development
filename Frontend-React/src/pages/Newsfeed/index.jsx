@@ -9,11 +9,11 @@ import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
 const NewsfeedPage = () => {
 
   const [articles, setArticles] = useState([]);
-
+  
   useEffect(() => {
     fetch('http://localhost:8000/api/articles/')
-      .then(response => response.json())
-      .then(data => setArticles(data));
+        .then(response => response.json())
+        .then(data => setArticles(data));
   }, []);
 
   return (
@@ -33,7 +33,7 @@ const NewsfeedPage = () => {
           <div className="news-box" key={article.id}>
               <div className="flex flex-row md:gap-10 items-center justify-between w-full">
                   <Text className="category-text">
-                    #Finance
+                    #{article.category}
                   </Text>
                   <button className="share-icon">
                     <FontAwesomeIcon icon={faShareAlt} />
@@ -41,7 +41,7 @@ const NewsfeedPage = () => {
               </div>
               <div className="content-box">
                 <Img
-                  src="https://live.staticflickr.com/65535/52870592824_6f51d52ccb.jpg"
+                  src={article.image_url}
                   className="article-image"
                   alt="rectangle"
                 />
@@ -49,7 +49,7 @@ const NewsfeedPage = () => {
                   <Text
                     className="article-text-headline"
                   >
-                    {article.title}
+                    {article.headline}
                   </Text>
                   <Text
                     className="article-text-content"
@@ -60,6 +60,7 @@ const NewsfeedPage = () => {
                   </Text>
                 </div>
               </div>
+              {article.polls.map(poll => (
               <div className="opinion-poll-box">
                 <Text
                   className="font-bold text-gray_401 text-left tracking-[-0.30px] w-auto"
@@ -67,17 +68,18 @@ const NewsfeedPage = () => {
                 >
                   OPINION POLL
                 </Text>
-                <div className="opinion-poll-question">
+                <div key='{poll.id}' className="opinion-poll-question">
                   <Text>
-                    Will AAP win more than 10 seats in Lok Sabha elections? Are you sure and do you really wanna guess?
+                    {poll.question}
                   </Text>
                   <div className="poll-options-box">
-                      <Button className="options"> Yes </Button>
-                      <Button className="options"> No </Button>
-                      <Button className="options"> Maybe </Button>
+                    {poll.options.map(option => (
+                      <Button className="options" key={option.id}> {option.option} </Button>
+                    ))}
                   </div>
                 </div>
               </div>
+            ))}
           </div>
           ))}
         </List>
