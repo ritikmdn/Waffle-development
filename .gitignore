@@ -22,3 +22,42 @@ Frontend-React/.env.production.local
 Frontend-React/npm-debug.log*
 Frontend-React/yarn-debug.log*
 Frontend-React/yarn-error.log*
+
+# Ignore compiled Python bytecode files
+Backend-Django/*.pyc
+Backend-Django/__pycache__/
+
+# Ignore the virtual environment directory
+Backend-Django/venv/
+Backend-Django/env/
+
+# Ignore the static files directory (if using collectstatic)
+Backend-Django/static/
+
+# Ignore the media files directory (if using user-uploaded files)
+Backend-Django/media/
+
+# Ignore the database file (if using SQLite)
+Backend-Django/*.sqlite3
+
+# Ignore sensitive or environment-specific configuration files
+Backend-Django/*.env
+Backend-Django/*.env.*
+Backend-Django/.env*/
+
+# Ignore IDE and editor files
+Backend-Django/.vscode/
+Backend-Django/.idea/
+Backend-Django/*.sublime-workspace
+Backend-Django/*.swp
+
+# Ignore log files
+Backend-Django/*.log
+
+# Ignore OS-specific files
+Backend-Django/.DS_Store
+Backend-Django/Thumbs.db
+
+# Ignore secret keys and sensitive information
+Backend-Django/*.key
+*.pem
