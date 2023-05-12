@@ -28,15 +28,16 @@ class PollOption(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     poll = models.ForeignKey(Poll, related_name='options', on_delete=models.CASCADE)
     option = models.CharField(max_length=200, default="Poll question")
+    votes = models.IntegerField(default=0)    
 
     def __str__(self):
         return self.option
 
 
-class PollResult(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    poll_option = models.ForeignKey(PollOption, on_delete=models.CASCADE)
-    user_count = models.UUIDField()
+# class PollResult(models.Model):
+#     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+#     poll_option = models.OneToOneField(PollOption, on_delete=models.CASCADE)
+#     votes = models.IntegerField(default=0)
 
-    def __str__(self):
-        return str(self.user_id)
+    # def __str__(self):
+    #     return str(self.user_id)
