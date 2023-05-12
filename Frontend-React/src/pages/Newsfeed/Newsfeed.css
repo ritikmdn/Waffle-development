@@ -67,7 +67,7 @@
 
 @media screen and (max-width: 768px) {
   .category-text {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
   }
 }
@@ -164,24 +164,23 @@
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   align-items: left;
-  justify-content: flex-start;
-  margin-top: 5vmin ;
-  padding: 1.5vmin;
-  padding-left: 2vmin;
-  padding-right: 2vmin;
+  justify-content: space-between;
+
+  padding: 2vmin;
+
   border-radius: 0.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  gap: 0.5vmin;
+  gap: 2vmin;
   width: 100%;
 }
 
 @media screen and (max-width: 768px) {
   .opinion-poll-box {
     width: 100%;
-    padding-top: 5vmin;
-    padding-bottom: 5vmin;
+    padding-top: 3vmin;
+    padding-bottom: 3vmin;
     align-items: center;
-    gap: 2vmin;
+    gap: 4vmin;
   }
 }  
 
@@ -189,11 +188,11 @@
   display: flex;
   flex-direction: row;
   font-family: "Helvetica Neue", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
-  gap: 5vmin;
-  align-items: flex-start;
-  justify-content: space-between;
+  gap: 3vmin;
+  align-items: baseline;
+  justify-content: flex-start;
   width: 100%;
   text-align: left;
 }
@@ -201,9 +200,10 @@
 @media screen and (max-width: 768px) {
   .opinion-poll-question {
     flex-direction: column;
-    gap: 10vmin;
-    font-size: 15px;
+    gap: 2vmin;
+    font-size: 16px;
     padding: 2vmin;
+    align-items: center;
   }
 }
 
@@ -215,7 +215,7 @@
   font-weight: 500;
   gap: 2.5vmin;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: center;
   width: auto;
 }
 
@@ -223,8 +223,8 @@
   .poll-options-box {
     flex-direction: column;
     gap: 5px;
-    align-content: center !important;
-    justify-content: center !important;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -236,11 +236,27 @@
   text-align: center;
   font-size: 15px;
   width: auto;
-  min-width: 10vmax;
+  /* min-width: 10vmax; */
   border-radius: 10px;
   padding: 2vmin;
   padding-left: 5vmin;
   padding-right: 5vmin;
+  background-color: #F4F4F4; /* assuming 'FillBluegray80026' is a variant that sets the background color to #263238 */
+}
+
+.options-inactive {
+  cursor: default;
+  font-weight: bold;
+  line-height: normal;
+  color: #766D6D; /* assuming 'bluegray_801' is a shade of blue-gray */
+  text-align: center;
+  font-size: 15px;
+  width: auto;
+  /* min-width: 10vmax; */
+  border-radius: 10px;
+  padding: 2vmin;
+  padding-left: 3vmin;
+  padding-right: 3vmin;
   background-color: #F4F4F4; /* assuming 'FillBluegray80026' is a variant that sets the background color to #263238 */
 }
 
@@ -250,9 +266,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  .options {
-      min-width: 30vmax;
+  .options, .options-inactive {
+      width: 90%;
       font-size: 12px;
+      justify-content: center;
   }
 }
 
