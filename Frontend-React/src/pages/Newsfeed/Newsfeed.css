@@ -110,6 +110,7 @@
   .article-image {
     flex: 1;
     height: auto;
+    max-height: 125vmin;
     max-width: 75vmin;
   }
 }  

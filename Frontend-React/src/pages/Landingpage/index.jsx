@@ -32,9 +32,7 @@ const LandingpagePage = () => {
               className="top-text-description"
             >
               <>
-                With our easily digestible format, acquiring knowledge is as
-                easy as playing a fun game, whether you&#39;re commuting or
-                taking a quick break
+              Get news in bite-sized waffles and win big. Swipe through hot-takes, trade on your opinion, and share your views. It’s news meets social media meets gaming!
               </>
             </Text>
           </div>
@@ -81,7 +79,7 @@ const LandingpagePage = () => {
                     <Text
                       className="feature-text-description"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor, turpis vitae hendrerit facilisis, ligula erat maximus urna, ut congue nibh erat tempor enim. Quisque vitae nisl dolor. Duis a sapien sit amet justo iaculis sollicitudin. Integer ac augue eros. In egestas volutpat suscipit. 
+                      Trade opinions, take polls, and dive into trending topics - it’s news made fun. Play games with friends, and compete against other readers in exciting games that offer real cash prizes!
                     </Text>
                   </div>
                 {/* </div> */}
@@ -106,7 +104,7 @@ const LandingpagePage = () => {
                     <Text
                       className="feature-text-description"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor, turpis vitae hendrerit facilisis, ligula erat maximus urna, ut congue nibh erat tempor enim. Quisque vitae nisl dolor. Duis a sapien sit amet justo iaculis sollicitudin. Integer ac augue eros. In egestas volutpat suscipit. 
+                      Get into the groove with Waffle News and make discovering knowledge a social activity. Connect with people, discuss and debate topics, share ideas and opinions, and follow your favorite news influencers!
                     </Text>
                 </div>
                 <Img
@@ -137,12 +135,12 @@ const LandingpagePage = () => {
                     <Text
                       className="feature-text-title"
                     >
-                      Compact. Like a TikTok.
+                      Engaging. Like a Reel.
                     </Text>
                     <Text
                       className="feature-text-description"
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor, turpis vitae hendrerit facilisis, ligula erat maximus urna, ut congue nibh erat tempor enim. Quisque vitae nisl dolor. Duis a sapien sit amet justo iaculis sollicitudin. Integer ac augue eros. In egestas volutpat suscipit. 
+                      Articles designed for quick consumption with personalized feed tailored to your interests, making them the perfect replacement to your Instagram breaks! Short, social bursts of knowledge. 
                     </Text>
                   </div>
                 {/* </div> */}

@@ -6,19 +6,40 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { useCookies } from 'react-cookie';
 import { WhatsappShareButton } from 'react-share';
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 const NewsfeedPage = () => {
 
   const [articles, setArticles] = useState([]);
   const [cookies, setCookie] = useCookies(['voted']);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [hasNextPage, setHasNextPage] = useState(false);
+  const [hasPreviousPage, setHasPreviousPage] = useState(false);
 
   const shareUrl = 'https://www.waffle.ink';
   
   useEffect(() => {
-    fetch('http://localhost:8000/api/articles/')
-        .then(response => response.json())
-        .then(data => setArticles(data));
-  }, []);
+    fetch(`http://localhost:8000/api/articles/?page=${currentPage}`)
+    .then(response => response.json())
+    .then(data => {
+        setArticles(data.results);
+        setHasNextPage(data.has_next);
+        setHasPreviousPage(data.has_previous);
+    });
+    console.log(currentPage,hasNextPage,hasPreviousPage);
+  }, [currentPage]);
+
+  const handleNextPage = () => {
+    if (hasNextPage) {
+        setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (hasPreviousPage) {
+        setCurrentPage(currentPage - 1);
+    }
+  };
 
   const handleVote = (pollOptionId, pollId) => {
     if (cookies.voted && cookies.voted.includes(pollId)) {
@@ -61,12 +82,12 @@ const NewsfeedPage = () => {
   return (
     <>
       <div className="newsfeed-page-container">
-          <LandingPageNavbar
-            waffle="Waffle."
-            product="Product"
-            readnews="Read News"
-            joinWaitlist="Join waitlist"
-          />
+        <LandingPageNavbar
+          waffle="Waffle."
+          product="Product"
+          readnews="Read News"
+          joinWaitlist="Join waitlist"
+        />
         <List
           className="list"
           orientation="vertical"
@@ -139,6 +160,14 @@ const NewsfeedPage = () => {
             ))}
           </div>
           ))}
+          <div>
+              <button onClick={handlePreviousPage} disabled={!hasPreviousPage} style={{fontFamily: 'Helvetica', color: '#766D6D', marginRight: '5vmin',}}>
+                <FontAwesomeIcon icon={faChevronLeft} /> Previous 
+              </button>
+              <button onClick={handleNextPage} disabled={!hasNextPage} style={{fontFamily: 'Helvetica', color: '#766D6D', marginLeft: '5vmin',}}>
+                Next <FontAwesomeIcon icon={faChevronRight} />
+              </button>
+          </div>
         </List>
         <div className="page-bottom-down">
           <Line className="bg-gray_105 h-0.5 mt-[10vmin] w-full" />
